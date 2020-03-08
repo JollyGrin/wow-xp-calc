@@ -18,6 +18,8 @@ export default class PartyList extends Component {
       this.addInput.current.value > 0
         ? this.addMember(this.addInput.current.value)
         : null
+
+      this.addInput.current.value = null
     }
 
     if (e.key === 'Backspace') {
@@ -25,6 +27,8 @@ export default class PartyList extends Component {
       !this.addInput.current.value
         ? this.popMember()
         : console.log('input', this.addInput.current.value)
+
+      this.addInput.current.value = null
     }
   }
 

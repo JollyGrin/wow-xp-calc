@@ -6,7 +6,8 @@ export default class DungeonSearch extends Component {
     super(props)
     this.state = {
       search: '',
-      list: {}
+      list: {},
+      dropdown: []
     }
   }
 
@@ -23,11 +24,17 @@ export default class DungeonSearch extends Component {
     const { list } = this.state
     const search = this.searchbar.current.value
     const listKeys = Object.keys(list)
-    const matchArr = listKeys.filter(hit => {
-      hit === search ? hit : null
+    const matchArr = []
+
+    listKeys.forEach(row => {
+      row.startsWith(search.toUpperCase()) ? matchArr.push(list[row]) : null
     })
 
-    console.log('check', search)
+    this.setState({ dropdown: matchArr })
+  }
+
+  compareStrings = (search, list) => {
+    list.forEach
   }
 
   componentDidMount () {
@@ -63,7 +70,7 @@ export default class DungeonSearch extends Component {
         </div>
         <div className='dropdown-menu' id='dropdown-menu' role='menu'>
           <div className='dropdown-content'>
-            <a href='#' className='dropdown-item'>
+            {/* <a href='#' className='dropdown-item'>
               SM Library
             </a>
             <a href='#' className='dropdown-item'>
@@ -74,7 +81,13 @@ export default class DungeonSearch extends Component {
             </a>
             <a href='#' className='dropdown-item'>
               SM Armory
-            </a>
+            </a> */}
+            {this.state.dropdown.map((drop, index) => (
+              <a key={drop + index} href='#' className='dropdown-item'>
+                {drop.name}
+                {console.log('drop', drop.name)}
+              </a>
+            ))}
           </div>
         </div>
       </div>
