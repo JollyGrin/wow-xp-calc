@@ -1,24 +1,22 @@
 import React, { Component } from 'react'
 import TheHead from '../components/TheHead'
+import Sidebar from '../components/Sidebar'
+import Display from '../components/Display'
 
 export default class index extends Component {
     render() {
         return (
-            <div>
+            <body>
                 <TheHead />
-                <section className="section">
-                    <div className="container">
-                        <div className="columns">
-                            <div className="column is-8 is-offset-2">
-                                <h1 className="title">
-                                Bulma Installed
-                                </h1>
-                                <a className="button is-large is-primary">Test Button</a>
-                            </div>
-                        </div>
+                <div className="columns">
+                    <div className="column is-3 left-panel">
+                        <Sidebar />
                     </div>
-                </section>
-            </div>
+                    <div className="column right-panel">
+                        <Display />
+                    </div>
+                </div>
+            </body>
         )
     }
 }
