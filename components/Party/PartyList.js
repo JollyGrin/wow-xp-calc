@@ -38,19 +38,14 @@ export default class PartyList extends Component {
     this.setState({
       party: this.state.party.slice(0, -1)
     })
-
-    // console.log('pop', this.state.party.pop())
   }
 
-  componentDidMount () {
-    console.log(this.state)
-  }
   render () {
     return (
       <Fragment>
         <ul className='party-list'>
-          {this.state.party.map(member => (
-            <PartyMember key={member} level={member} />
+          {this.state.party.map((member, index) => (
+            <PartyMember key={index + member} level={member} />
           ))}
           <input
             ref={this.addInput}

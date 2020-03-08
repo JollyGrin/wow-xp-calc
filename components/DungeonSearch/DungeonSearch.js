@@ -1,16 +1,41 @@
 import React, { Component } from 'react'
+import { getList } from '../../lib/getList'
 
 export default class DungeonSearch extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      search: ''
+      search: '',
+      list: {}
     }
   }
 
+  // define the searchbar
   searchbar = React.createRef()
+
+  // trigger on every entry
   searchbarRefresh = () => {
     this.setState({ search: this.searchbar.current.value })
+    this.findDungeon()
+  }
+
+  findDungeon = () => {
+    const { list } = this.state
+    const search = this.searchbar.current.value
+    const listKeys = Object.keys(list)
+    const matchArr = listKeys.filter(hit => {
+      hit === search ? hit : null
+    })
+
+    console.log('check', search)
+  }
+
+  componentDidMount () {
+    getList().then(result => {
+      this.setState({
+        list: result.data
+      })
+    })
   }
 
   render () {

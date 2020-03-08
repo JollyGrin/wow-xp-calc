@@ -8,5 +8,15 @@
     "range": [15, 25],
     "name": "Wailing Caverns",
     "pvpFlag": "n"
+  },
+  "VC": {
+    "range": [18, 23],
+    "name": "The Deadmines",
+    "pvpFlag": "n"
+  },
+  "SFK": {
+    "range": [22, 30],
+    "name": "Shadowfang Keep",
+    "pvpFlag": "n"
   }
 }
