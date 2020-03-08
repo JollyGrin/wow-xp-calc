@@ -1,0 +1,12 @@
+{
+  "RFC": {
+    "range": [13, 18],
+    "name": "Ragefire Chasm",
+    "pvpFlag": "h"
+  },
+  "WC": {
+    "range": [15, 25],
+    "name": "Wailing Caverns",
+    "pvpFlag": "n"
+  }
+}

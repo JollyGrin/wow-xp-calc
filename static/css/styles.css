@@ -2870,7 +2870,7 @@ a.tag:hover {
   background-color: transparent;
   border-color: transparent;
   border-radius: 4px;
-  color: #E5E5E5; }
+  color: #e5e5e5; }
   .input::-moz-placeholder, .textarea::-moz-placeholder, .select select::-moz-placeholder {
     color: rgba(229, 229, 229, 0.3); }
   .input::-webkit-input-placeholder, .textarea::-webkit-input-placeholder, .select select::-webkit-input-placeholder {
@@ -2880,10 +2880,10 @@ a.tag:hover {
   .input:-ms-input-placeholder, .textarea:-ms-input-placeholder, .select select:-ms-input-placeholder {
     color: rgba(229, 229, 229, 0.3); }
   .input:hover, .textarea:hover, .select select:hover, .is-hovered.input, .is-hovered.textarea, .select select.is-hovered {
-    border-color: #b5b5b5; }
+    border-color: transparent; }
   .input:focus, .textarea:focus, .select select:focus, .is-focused.input, .is-focused.textarea, .select select.is-focused, .input:active, .textarea:active, .select select:active, .is-active.input, .is-active.textarea, .select select.is-active {
     border-color: transparent;
-    box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25); }
+    box-shadow: 0 0 0 0.125em transparent; }
   .input[disabled], .textarea[disabled], .select select[disabled],
   fieldset[disabled] .input,
   fieldset[disabled] .textarea,
@@ -7102,15 +7102,17 @@ label.panel-block {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
-body {
+.main {
   font-family: 'Rubik', sans-serif;
   font-family: 'Rubik Mono One', sans-serif; }
 
 .left-panel {
-  background-color: #1E1E24;
+  background-color: #1e1e24;
   min-height: 101.5vh; }
-  .left-panel p, .left-panel .title, .left-panel .subtitle {
-    color: #FFCF99; }
+  .left-panel p,
+  .left-panel .title,
+  .left-panel .subtitle {
+    color: #ffcf99; }
   .left-panel input.input {
     font-family: 'Rubik Mono One', sans-serif;
     font-size: 1.2rem; }
@@ -7120,11 +7122,11 @@ body {
   .left-panel ul.party-list {
     margin-left: 2rem;
     font-size: 3rem;
-    color: #E5E5E5; }
+    color: #e5e5e5; }
   .left-panel a.remove-member {
     color: transparent; }
     .left-panel a.remove-member:hover {
-      color: #92140C; }
+      color: #92140c; }
 
 .right-panel {
-  background-color: #FFCF99; }
+  background-color: #ffcf99; }

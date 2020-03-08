@@ -1,7 +1,3 @@
 {
-    "build": {
-        "env": {
-            "APIKEY": "@example"
-        }
-    }
-}
+    "name": "wow-xp-fe"
+  }

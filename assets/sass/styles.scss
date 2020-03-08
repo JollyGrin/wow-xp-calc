@@ -1,57 +1,63 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Rubik|Rubik+Mono+One&display=swap');
 
-$color-dark: #1E1E24;
-$color-light: #FFCF99;
-$color-red: #92140C;
-$color-white: #E5E5E5;
+$color-dark: #1e1e24;
+$color-light: #ffcf99;
+$color-red: #92140c;
+$color-white: #e5e5e5;
 
-// Bulma Recustomize
+// Bulma Input Customization
 $input-background-color: transparent;
 $input-color: $color-white;
 $input-border-color: transparent;
+$input-hover-border-color: transparent;
 $input-focus-border-color: transparent;
+$input-focus: transparent;
+$input-focus-border-color: transparent;
+$input-focus-box-shadow-color: transparent;
 
 @import '../../node_modules/bulma/bulma.sass';
 
-body {
-    font-family: 'Rubik', sans-serif;
-    font-family: 'Rubik Mono One', sans-serif;
+.main {
+  font-family: 'Rubik', sans-serif;
+  font-family: 'Rubik Mono One', sans-serif;
 }
 
 .left-panel {
-    background-color: $color-dark;
-    min-height: 101.5vh;
+  background-color: $color-dark;
+  min-height: 101.5vh;
 
-    p, .title, .subtitle {
-        color: $color-light;
+  p,
+  .title,
+  .subtitle {
+    color: $color-light;
+  }
+
+  input.input {
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 1.2rem;
+  }
+
+  .party-list input.input {
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 3rem;
+  }
+
+  ul.party-list {
+    margin-left: 2rem;
+    font-size: 3rem;
+    color: $color-white;
+  }
+
+  a.remove-member {
+    color: transparent;
+
+    &:hover {
+      color: $color-red;
     }
-
-    input.input {
-        font-family: 'Rubik Mono One', sans-serif;
-        font-size: 1.2rem;
-    }
-
-    .party-list input.input {
-        font-family: 'Rubik Mono One', sans-serif;
-        font-size: 3rem;
-    }
-
-    ul.party-list{
-        margin-left: 2rem;
-        font-size: 3rem;
-        color: $color-white;
-    }
-
-    a.remove-member{
-        color: transparent;
-
-        &:hover {
-            color: $color-red;
-        }
-    }
+  }
 }
 
 .right-panel {
-    background-color: $color-light;
+  background-color: $color-light;
 }
